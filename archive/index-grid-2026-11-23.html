@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="ru" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#05091b">
+<title>ноябрь — Виктор × Анастасия</title>
+<meta name="description" content="Фотопоэма. Четыре кадра и четыре подписи о том, как люди продолжают жить, когда совсем темно.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ноябрь — Виктор × Анастасия">
+<meta property="og:description" content="Фотопоэма. Четыре кадра и четыре подписи о том, как люди продолжают жить, когда совсем темно.">
+<meta property="og:url" content="https://r0undm1dn1ghty-star.github.io/november/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@200;300;400&family=Sofia+Sans:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: dark;
+    --night:#05091b;
+    --paper:#e6eaf5;
+    --ink:#a9b3cb;
+    --kick:#cfd6e8;
+    --mute:rgba(230,234,245,.45);
+    --hair:rgba(230,234,245,.13);
+    --title:'IBM Plex Sans',sans-serif;
+    --mono:'IBM Plex Mono',monospace;
+    --body:'Sofia Sans','Arial',sans-serif;
+    --ease:cubic-bezier(.2,.55,.2,1);
+    --pad:4.6vw;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{background:var(--night);-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;background:var(--night);color:var(--paper);
+    font-family:var(--body);font-weight:300;font-size:18px;line-height:1.55;
+    -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+    overflow-x:hidden;
+  }
+  ::selection{color:var(--night);background:var(--paper);}
+  :focus-visible{outline:1px solid var(--paper);outline-offset:6px;}
+  ::-webkit-scrollbar{width:9px;}
+  ::-webkit-scrollbar-track{background:var(--night);}
+  ::-webkit-scrollbar-thumb{background:#1a2240;}
+  ::-webkit-scrollbar-thumb:hover{background:#252f52;}
+  html{scrollbar-color:#1a2240 #05091b;}
+
+  .progress{
+    position:fixed;z-index:40;top:0;left:0;right:0;height:1px;
+    background:rgba(230,234,245,.07);pointer-events:none;
+  }
+  .progress i{
+    display:block;height:100%;width:100%;background:rgba(230,234,245,.55);
+    transform:scaleX(0);transform-origin:0 50%;
+  }
+
+  .open{
+    min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;
+    padding:0 var(--pad) 8.5svh;
+  }
+  .open h1{
+    margin:0 0 .13em -.028em;
+    font-family:var(--title);font-weight:200;
+    font-size:clamp(5.4rem,20.5vw,17rem);line-height:.79;letter-spacing:-.038em;
+    color:#eef1f8;
+  }
+  .open .hair{height:1px;background:var(--hair);margin:0 0 16px;}
+  .open .meta{
+    display:flex;justify-content:space-between;gap:20px;
+    font-family:var(--mono);font-size:11px;letter-spacing:.17em;text-transform:uppercase;
+    color:var(--mute);
+  }
+  .cue{
+    margin-top:clamp(26px,4.5svh,48px);display:flex;align-items:center;gap:14px;
+    font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(230,234,245,.28);
+  }
+  .cue span{display:block;width:44px;height:1px;background:rgba(230,234,245,.22);}
+
+  .state{
+    height:100svh;min-height:560px;
+    display:grid;grid-template-rows:auto minmax(0,1fr) auto;
+    gap:clamp(16px,2.4svh,30px);
+    padding:5.4svh var(--pad) 6.4svh;
+  }
+  .head{
+    display:flex;align-items:center;gap:16px;
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;color:rgba(230,234,245,.38);
+  }
+  .head .bar{flex:1;height:1px;background:var(--hair);}
+  .head .tot{color:rgba(230,234,245,.22);}
+
+  .plate{
+    min-height:0;margin:0;display:flex;align-items:flex-end;justify-content:flex-start;
+    overflow:hidden;
+  }
+  .plate img{
+    display:block;width:auto;height:auto;max-width:100%;max-height:100%;margin:0;
+    filter:none;transform:none;
+    transition:filter .6s var(--ease),transform .95s var(--ease);
+    will-change:filter,transform;
+  }
+
+  .caption{
+    margin:0;max-width:50ch;text-wrap:pretty;
+    color:var(--ink);font-size:clamp(1rem,1.32vw,1.2rem);line-height:1.63;
+  }
+  .caption b{
+    display:block;margin:0 0 .5em;
+    font-family:var(--mono);font-weight:400;letter-spacing:.015em;
+    font-size:clamp(.8rem,.98vw,.88rem);line-height:1.5;color:var(--kick);
+  }
+
+  .end{
+    min-height:62svh;display:flex;flex-direction:column;justify-content:flex-end;
+    padding:0 var(--pad) 6svh;
+  }
+  .end .hair{height:1px;background:var(--hair);margin:0 0 24px;}
+  .end .who{
+    margin:0;text-wrap:pretty;font-family:var(--title);font-weight:300;
+    font-size:clamp(2.1rem,5.6vw,4.6rem);line-height:.98;letter-spacing:-.033em;color:#dfe4f0;
+  }
+  .end .row{
+    display:flex;justify-content:space-between;gap:24px;align-items:baseline;
+    margin-top:clamp(30px,6svh,64px);
+    font-family:var(--mono);font-size:11px;letter-spacing:.17em;text-transform:uppercase;color:var(--mute);
+  }
+
+  /* механика включается только при живом JS */
+  .js-ready .plate img{filter:blur(16px);transform:scale(1.055);}
+  .js-ready .caption{opacity:0;transform:translateY(12px);transition:opacity .85s var(--ease),transform 1.05s var(--ease);}
+  .js-ready .state.is-focus .plate img{filter:blur(0);transform:scale(1);}
+  .js-ready .state.is-focus .caption{opacity:1;transform:none;}
+
+  @media (max-width:900px){
+    :root{--pad:5.6vw;}
+    body{font-size:16px;}
+    .state{padding:4.6svh var(--pad) 11svh;gap:16px;grid-template-rows:auto auto auto;align-content:center;}
+    .caption{max-width:44ch;font-size:1rem;}
+    .caption b{font-size:.79rem;}
+    .open{padding-bottom:7svh;}
+    .open h1{font-size:clamp(4.6rem,21vw,9rem);}
+    .cue{display:none;}
+    .end{min-height:52svh;}
+    .end .row{margin-top:34px;font-size:10px;letter-spacing:.14em;}
+  }
+  @media (max-height:620px){
+    .state{padding-top:3svh;padding-bottom:4svh;gap:10px;}
+    .caption{font-size:.94rem;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .js-ready .plate img{filter:none;transform:none;transition:none;}
+    .js-ready .caption{opacity:1;transform:none;transition:none;}
+  }
+</style>
+</head>
+<body>
+<div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+
+<section class="open">
+  <h1>ноябрь</h1>
+  <div class="hair"></div>
+  <div class="meta">
+    <span>Виктор × Анастасия</span>
+    <span>фотопоэма</span>
+  </div>
+  <div class="cue"><span></span>без остановки не читается</div>
+</section>
+
+<main>
+  <section class="state" data-state="1">
+    <header class="head"><span>01</span><span class="bar"></span><span class="tot">/ 04</span></header>
+    <figure class="plate">
+      <img src="img/entrance.webp" alt="голубые цветы у каменного бордюра, выжженный свет" width="1100" height="714" fetchpriority="high">
+    </figure>
+    <p class="caption"><b>бездна не приходит одна.</b> память всегда остаётся с нами, своими светлыми огоньками подсвечивая жизнь, в которой мы когда-то были уверены. в которой были близкие люди, которых с нами больше нет. их больше никогда не увидишь, не поговоришь с ними, не обнимешь и не скажешь «прости».</p>
+  </section>
+
+  <section class="state" data-state="2">
+    <header class="head"><span>02</span><span class="bar"></span><span class="tot">/ 04</span></header>
+    <figure class="plate">
+      <img src="img/sepia.webp" alt="кадр, снятый через матовое стекло: только пятна света" width="2000" height="1500" loading="lazy">
+    </figure>
+    <p class="caption"><b>свет виднеется, но ничего не проглядывается.</b> туманная пелена падает на глаза, потому что память сильнее реальности. конвейер картинок о прошлом катится-крутится, постоянно показывая то, от чего тело бросает в оцепенение.</p>
+  </section>
+
+  <section class="state" data-state="3">
+    <header class="head"><span>03</span><span class="bar"></span><span class="tot">/ 04</span></header>
+    <figure class="plate">
+      <img src="img/void.webp" alt="ночной клён над водой, огни на дальнем берегу" width="2000" height="1500" loading="lazy">
+    </figure>
+    <p class="caption"><b>всё застыло.</b> смерть, нарисованная природой неизбежно забирает людей к себе. в России люди умирают от нездорового образа жизни, братоубийственной войны, своих глупых выборов. смерть неумолима.</p>
+  </section>
+
+  <section class="state" data-state="4">
+    <header class="head"><span>04</span><span class="bar"></span><span class="tot">/ 04</span></header>
+    <figure class="plate">
+      <img src="img/touch.webp" alt="луч света сквозь ночные облака" width="2000" height="1429" loading="lazy">
+    </figure>
+    <p class="caption"><b>это соприкосновение со светом и перерождение.</b> тернии срывают покровы старых туч — и мы можем лететь выше, лишь только когда встретились и прошли сквозь боль прошлого. раскаявшись и полюбив. снова и снова.</p>
+  </section>
+</main>
+
+<footer class="end">
+  <div class="hair"></div>
+  <p class="who">Виктор × Анастасия</p>
+  <div class="row"><span>ноябрь</span><span>2026</span></div>
+</footer>
+
+<script>
+(() => {
+  document.documentElement.classList.remove('no-js');
+  document.documentElement.classList.add('js-ready');
+
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const states = [...document.querySelectorAll('.state')];
+  const bar = document.getElementById('progressBar');
+  if (!states.length) return;
+
+  let lastY = window.scrollY, lastT = performance.now();
+  let speed = 0, restFrom = performance.now();
+  const clamp = (v, a, b) => Math.min(Math.max(v, a), b);
+
+  function progress() {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.transform = `scaleX(${max > 0 ? clamp(window.scrollY / max, 0, 1) : 0})`;
+  }
+
+  if (reduce.matches) {
+    states.forEach(s => s.classList.add('is-focus'));
+    progress();
+    window.addEventListener('scroll', progress, { passive: true });
+    window.addEventListener('resize', progress);
+    return;
+  }
+
+  function frame(now) {
+    const y = window.scrollY;
+    const dt = Math.max(now - lastT, 1);
+    const inst = Math.abs(y - lastY) / dt;
+    lastY = y; lastT = now;
+
+    speed = speed * 0.78 + inst * 0.22;
+    if (inst > 0.015) restFrom = now;
+    if (speed < 0.02) speed *= 0.7;
+
+    progress();
+
+    const quiet = (now - restFrom) > 420 && speed < 0.045;
+
+    let dominant = -1, best = 0;
+    states.forEach((s, i) => {
+      const r = s.getBoundingClientRect();
+      const overlap = Math.min(r.bottom, window.innerHeight) - Math.max(r.top, 0);
+      if (overlap > best) { best = overlap; dominant = i; }
+    });
+    if (best < window.innerHeight * 0.35) dominant = -1;
+
+    states.forEach((s, i) => {
+      const r = s.getBoundingClientRect();
+      const visible = r.bottom > -40 && r.top < window.innerHeight + 40;
+      const img = s.querySelector('img');
+      if (!visible) {
+        s.classList.remove('is-focus');
+        if (img.style.filter) { img.style.filter = ''; img.style.transform = ''; }
+        return;
+      }
+      if (quiet && i === dominant) {
+        s.classList.add('is-focus');
+      } else {
+        s.classList.remove('is-focus');
+        const b = clamp(4 + speed * 30, 4, 22);
+        img.style.filter = `blur(${b.toFixed(1)}px)`;
+        img.style.transform = `scale(${(1 + b * 0.004).toFixed(3)})`;
+      }
+    });
+
+    if (quiet) {
+      states.forEach(s => {
+        const img = s.querySelector('img');
+        if (img.style.filter) { img.style.filter = ''; img.style.transform = ''; }
+      });
+    }
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
