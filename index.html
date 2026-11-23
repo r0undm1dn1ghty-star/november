@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#05091b">
-  <title>ноябрь — Виктор × Анастасия</title>
-  <meta name="description" content="Люди продолжают жить, когда совсем темно, и доживают до света. Работа Виктора и Анастасии.">
+  <title>ноябрь — фотопоэма Виктора и Анастасии</title>
+  <meta name="description" content="ноябрь — фотопоэма Виктора и Анастасии">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@300;400;500&family=Sofia+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -87,21 +87,6 @@
     }
 
     .site { overflow: clip; }
-    .topline {
-      position: absolute;
-      z-index: 5;
-      top: 0;
-      left: 0;
-      display: flex;
-      width: 100%;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 27px 4.6vw;
-      color: rgba(232, 237, 250, .8);
-      font-size: 14px;
-      letter-spacing: .015em;
-    }
-    .topline__names { font-family: var(--mono); font-size: 12px; letter-spacing: .025em; text-decoration: none; }
 
     .hero {
       position: relative;
@@ -159,15 +144,6 @@
       line-height: .84;
       text-shadow: 0 5px 50px rgba(3, 6, 18, .2);
     }
-    .hero__subtitle {
-      max-width: 26ch;
-      margin: 0;
-      color: rgba(223, 230, 247, .8);
-      font-size: clamp(1.12rem, 1.7vw, 1.55rem);
-      font-weight: 300;
-      letter-spacing: .015em;
-      line-height: 1.45;
-    }
     .hero__scroll {
       position: absolute;
       z-index: 1;
@@ -189,68 +165,22 @@
 
     .passage {
       position: relative;
-      padding: clamp(170px, 23vw, 340px) 9vw clamp(180px, 25vw, 360px);
+      padding: clamp(120px, 15vw, 230px) 9vw clamp(120px, 15vw, 230px);
     }
-    .passage__text {
-      max-width: 16ch;
-      margin: 0 0 0 auto;
-      color: #d5dbea;
-      font-size: clamp(2.25rem, 5.25vw, 5.35rem);
-      font-weight: 300;
-      letter-spacing: -.045em;
-      line-height: 1.13;
-    }
-    .passage__text span { color: #7886aa; }
     .passage__last {
       max-width: 34ch;
-      margin: clamp(52px, 9vw, 130px) 0 0 auto;
-      color: var(--mist);
-      font-size: clamp(1.08rem, 1.7vw, 1.42rem);
-      font-weight: 300;
-      line-height: 1.6;
+      margin: 0 0 0 auto;
+      color: #ccd4e5;
+      font-size: clamp(1.14rem, 1.75vw, 1.5rem);
+      font-weight: 400;
+      line-height: 1.58;
     }
 
-    .interlude {
-      position: relative;
-      display: grid;
-      min-height: 72vh;
-      place-items: center;
-      padding: 100px 7vw;
-      overflow: hidden;
-      background: transparent;
-    }
-    .interlude::after {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, transparent 0%, rgba(4,8,24,.55) 26%, rgba(4,8,24,.55) 74%, transparent 100%);
-      content: '';
-    }
-    .interlude__line {
-      position: relative;
-      z-index: 1;
-      max-width: 16ch;
-      margin: 0;
-      color: rgba(226, 232, 247, .91);
-      font-family: var(--title);
-      font-size: clamp(3.4rem, 8.8vw, 9rem);
-      font-weight: 300;
-      letter-spacing: -.075em;
-      line-height: .98;
-      text-align: center;
-      text-wrap: balance;
-    }
-    .interlude__line em { color: #8b98b8; font-style: normal; }
 
     .colophon {
       padding: clamp(120px, 15vw, 230px) 9vw clamp(56px, 7vw, 88px);
     }
     .colophon__rule { height: 1px; background: var(--rule); margin: 0 0 clamp(34px, 5vw, 64px); }
-    .colophon__title {
-      margin: 0;
-      font-family: var(--title); font-weight: 300;
-      font-size: clamp(2.5rem, 6.6vw, 5.6rem);
-      letter-spacing: -.04em; line-height: .98; color: #e2e7f3;
-    }
     .colophon__people {
       display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: clamp(30px, 5vw, 72px);
@@ -313,12 +243,10 @@
 
     @media (min-width: 1000px) {
       .hero__photo { background-position: center 43%; }
-      .interlude { background-position: center 55%; }
-    }
+      }
     @media (max-width: 680px) {
       body { font-size: 16px; }
-      .topline { padding: 20px 5vw; font-size: 13px; }
-      .hero { min-height: 94svh; min-height: 94svh; padding: 0 5vw 13vh; }
+        .hero { min-height: 94svh; min-height: 94svh; padding: 0 5vw 13vh; }
       .hero__photo { inset: -1%; background-position: 52% 36%; filter: brightness(.7) contrast(1.13) saturate(.92); }
       .hero::before {
         background:
@@ -328,14 +256,10 @@
           radial-gradient(100% 86% at 50% 45%, transparent 30%, rgba(3,7,24,.35) 100%);
       }
       .hero h1 { margin-bottom: 18px; font-size: clamp(5.5rem, 23vw, 9rem); }
-      .hero__subtitle { max-width: 25ch; font-size: 1.07rem; }
-      .hero__scroll { right: 5vw; bottom: 5vh; width: 37px; height: 37px; }
-      .passage { padding: 150px 8vw 165px; }
-      .passage__text { max-width: 13ch; margin-left: 0; font-size: clamp(2.3rem, 10.2vw, 4.35rem); }
-      .passage__last { margin-top: 48px; margin-left: 0; font-size: 1.06rem; }
-      .interlude { min-height: 58vh; padding-inline: 8vw; background-position: 49% center; }
-      .interlude__line { font-size: clamp(3.1rem, 13vw, 5.8rem); }
-      .grain { opacity: .3; background-size: 145px 145px; }
+        .hero__scroll { right: 5vw; bottom: 5vh; width: 37px; height: 37px; }
+      .passage { padding: 110px 8vw 120px; }
+        .passage__last { margin-top: 48px; margin-left: 0; font-size: 1.06rem; }
+          .grain { opacity: .3; background-size: 145px 145px; }
       .pores { opacity: .12; background-size: 310px 310px; }
     }
     @media (prefers-reduced-motion: reduce) {
@@ -350,22 +274,17 @@
   <div class="grain" aria-hidden="true"></div>
   <div class="pores" aria-hidden="true"></div>
   <div class="site" id="top">
-    <header class="topline">
-      <a class="topline__names" href="#top">Виктор × Анастасия</a>
-    </header>
 
     <main>
       <section class="hero" aria-labelledby="title">
         <div class="hero__photo" aria-hidden="true"></div>
         <div class="hero__copy">
           <h1 id="title">ноябрь</h1>
-          <p class="hero__subtitle">Люди продолжают жить, когда совсем темно, и доживают до света.</p>
         </div>
         <a class="hero__scroll" href="#history" aria-label="Листать дальше">↓</a>
       </section>
 
       <section class="passage" id="history" aria-label="Концепция">
-        <p class="passage__text fade-in">Ноябрь — русская тьма во всей своей красе. <span>Мы оказались охвачены ночью внезапно и сокрушительно.</span></p>
         <p class="passage__last fade-in">"ноябрь" показал нам обоим, кем именно становится Человек, когда ни за окном, ни в душе не происходит ничего кроме холода и пустоты.</p>
       </section>
 
@@ -386,11 +305,6 @@
           <p class="poem__text fade-in"><span>свет виднеется, но ничего не проглядывается.</span> туманная пелена падает на глаза, потому что память сильнее реальности. конвейер картинок о прошлом катится-крутится, постоянно показывая то, от чего тело бросает в оцепенение.</p>
         </div>
       </section>
-
-      <section class="interlude" aria-label="История возвращения к свету">
-        <p class="interlude__line fade-in">Мы много раз рассыпались.<br>И каждый раз собирали себя.<br><em>Совсем заново.</em></p>
-      </section>
-
       <section class="frame">
         <figure class="shot fade-in">
           <img src="img/void.webp" alt="ночной клён над водой, огни на дальнем берегу" width="2000" height="1500" style="object-position:center 45%" loading="lazy">
@@ -415,14 +329,13 @@
 
       <footer class="colophon">
         <div class="colophon__rule"></div>
-        <p class="colophon__title fade-in">Виктор × Анастасия</p>
         <div class="colophon__people fade-in">
           <div class="colophon__person">
-            <p class="colophon__name">Виктор</p>
+            <p class="colophon__name">Виктор Зайцев</p>
             <p class="colophon__role">поэт · философ · полимат<br>автор канала «Розовый взгляд»</p>
           </div>
           <div class="colophon__person">
-            <p class="colophon__name">Анастасия</p>
+            <p class="colophon__name">Анастасия Чупрова</p>
             <p class="colophon__role">фотограф · лингвист · культуролог</p>
           </div>
         </div>
