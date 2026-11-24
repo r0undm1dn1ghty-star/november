@@ -180,7 +180,7 @@
 
 
     .colophon {
-      padding: clamp(120px, 15vw, 230px) 9vw clamp(56px, 7vw, 88px);
+      padding: clamp(220px, 24vw, 380px) 9vw clamp(56px, 7vw, 88px);
     }
     .colophon__rule { height: 1px; background: var(--rule); margin: 0 0 clamp(34px, 5vw, 64px); }
     .colophon__people {
@@ -193,6 +193,16 @@
       font-family: var(--title); font-weight: 400;
       font-size: clamp(1.45rem, 2.4vw, 2.15rem);
       letter-spacing: -.025em; line-height: 1.1; color: #eef1f8;
+    }
+    .colophon__role a.chan {
+      color: inherit; text-decoration: none;
+      border-bottom: 1px solid rgba(207,214,232,.38);
+      padding-bottom: 1px;
+      transition: color .3s ease, border-color .3s ease;
+    }
+    .colophon__role a.chan:hover,
+    .colophon__role a.chan:focus-visible {
+      color: #f2f5fb; border-bottom-color: rgba(242,245,251,.85);
     }
     .colophon__role {
       margin: 12px 0 0; max-width: 26ch;
@@ -333,7 +343,7 @@
         <div class="colophon__people fade-in">
           <div class="colophon__person">
             <p class="colophon__name">Виктор Зайцев</p>
-            <p class="colophon__role">поэт · философ · полимат<br>автор канала «Розовый взгляд»</p>
+            <p class="colophon__role">поэт · философ · полимат<br>автор канала <a class="chan" href="https://t.me/p1nks1ght" target="_blank" rel="noopener">«розовый взгляд»</a></p>
           </div>
           <div class="colophon__person">
             <p class="colophon__name">Анастасия Чупрова</p>
