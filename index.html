@@ -154,24 +154,6 @@
       line-height: .84;
       text-shadow: 0 5px 50px rgba(3, 6, 18, .2);
     }
-    .hero__scroll {
-      position: absolute;
-      z-index: 1;
-      right: 4.6vw;
-      bottom: 10.7vh;
-      display: flex;
-      width: 42px;
-      height: 42px;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid rgba(225, 232, 249, .38);
-      border-radius: 50%;
-      color: rgba(225, 232, 249, .85);
-      font-size: 18px;
-      text-decoration: none;
-      transition: background .3s ease, transform .3s var(--ease);
-    }
-    .hero__scroll:hover { transform: translateY(4px); background: rgba(225,232,249,.1); }
 
     .passage {
       position: relative;
@@ -277,8 +259,7 @@
           radial-gradient(100% 86% at 50% 45%, transparent 30%, rgba(3,7,24,.35) 100%);
       }
       .hero h1 { margin-bottom: 18px; font-size: clamp(5.5rem, 23vw, 9rem); }
-        .hero__scroll { right: 5vw; bottom: 5vh; width: 37px; height: 37px; }
-      .passage { padding: 110px 8vw 120px; }
+        .passage { padding: 110px 8vw 120px; }
         .passage__last { margin-top: 48px; margin-left: 0; font-size: 1.06rem; }
           .grain { opacity: .3; background-size: 145px 145px; }
       .pores { opacity: .12; background-size: 310px 310px; }
@@ -302,7 +283,6 @@
         <div class="hero__copy">
           <h1 id="title">ноябрь</h1>
         </div>
-        <a class="hero__scroll" href="#history" aria-label="Листать дальше">↓</a>
       </section>
 
       <section class="passage" id="history" aria-label="Концепция">
